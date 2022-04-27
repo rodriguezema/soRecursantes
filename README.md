@@ -1,0 +1,4 @@
+##INTEGRANTES
+1. Emanuel Rodriguez
+
+#PRACTICA 1 SO - RECURSANTES
