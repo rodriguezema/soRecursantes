@@ -13,8 +13,17 @@
 #   d. ¿Qué diferencia hay entre wait y sleep?
 ##########################################################
 
-for i in {1..10000}
-do
-   echo $i
-done
-echo "Fin del script"
+
+for i in {1..10000} 
+  do
+    ( echo $i ) &
+done 
+echo "Fin del script" 
+exit 0
+
+###############################################################
+# El operador & es un operador de ejecución que permite ejecutar un comando en segundo plano.
+# La impresion de los numeros se realiza en segundo plano.
+#El script continua imprimiendo los numeros hasta que se termina el script.
+###############################################################
+
