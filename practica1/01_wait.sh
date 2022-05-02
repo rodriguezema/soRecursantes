@@ -23,4 +23,9 @@ echo "Fin del script"
 exit 0
 
 
+###########################################
+#  d. ¿Qué diferencia hay entre wait y sleep?
+# wait espera a que todas las tareas sean completadas para continuar con el script.
+# sleep espera un tiempo determinado para continuar con el script.
+###########################################
 
