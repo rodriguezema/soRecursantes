@@ -22,9 +22,5 @@ wait
 echo "Fin del script" 
 exit 0
 
-###############################################################
-# El operador & es un operador de ejecución que permite ejecutar un comando en segundo plano.
-# La impresion de los numeros se realiza en segundo plano.
-#El script continua imprimiendo los numeros hasta que se termina el script.
-###############################################################
+
 
