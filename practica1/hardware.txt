@@ -1,0 +1,17 @@
+==========================================================
+a. Nombre del fabricante del sistema:  
+MSI
+b. Versión del procesador que se está utilizando:
+AMD A10-7700K Radeon R7, 10 Compute Cores 4C+6G
+c. Fecha de inicio de la BIOS: 
+08/10/2016
+d. Memoria máxima que el sistema permite: 
+Capacity:
+e. El tipo de arquitectura utilizada (32 o 64 bits): 
+x86_64
+f. Cantidad de CPUs lógicas disponible:
+4
+g. El lenguaje instalado para la información de la BIOS: 
+American Megatrends Inc.
+==========================================================
+Fin del script
