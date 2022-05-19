@@ -1,0 +1,21 @@
++Deshabilitar el montaje automático del dispositivo
+El montaje automático de sistemas de archivos presenta riesgos de seguridad de dispositivos desconocidos
+que pueden estar conectados a un sistema. En otras palabras, un atacante podría conectar un dispositivo USB 
+para entregar una carga útil cuando el dispositivo se monta automáticamente.
+ Deshabilite el montaje automático deteniendo y deshabilitando el autofsservicio.
+
+$ sudo systemctl stop autofs
+
+$ sudo systemctl disable autofs
+
+Puede ser un poco menos conveniente tener que montar manualmente los sistemas de archivos después de conectar 
+un nuevo dispositivo al sistema, pero el aumento de la seguridad compensa los tres segundos adicionales de trabajo
+necesarios para montar un dispositivo. Esto le permite al administrador del sistema la oportunidad de desactivar,
+borrar o expulsar un dispositivo no autorizado.
+
++Deshabilitar dispositivos USB (para servidores sin cabeza)
+Desea evitar que alguien se acerque a su servidor y cargue archivos maliciosos o transfiera datos, especialmente 
+si en realidad no usa los puertos USB de su servidor. 
+Para hacer esto, abra /etc/modprobe.d/block_usb.confy agregue la siguiente línea:
+
+install usb-storage /bin/true
