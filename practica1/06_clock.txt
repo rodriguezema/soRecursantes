@@ -1,0 +1,33 @@
+Inicie un reloj que se actualice a cada segundo en su escritorio gráfico utilizando el comando
+xclock -d -update. Dentro de un fichero 06_clock.txt responda a las siguientes preguntas:
+a. Si ahora se oprime la combinación de teclas Ctrl+Z, y luego se ejecuta el
+comando fg %1, ¿qué sucede con el estado del proceso paso a paso?
+b. Si se vuelve a oprimir la combinación de teclas Ctrl+Z, y luego se ejecuta
+el comando bg %1, ¿qué sucede con el estado del proceso paso a paso?
+c. ¿Cómo podría hacer para que se inicie el proceso directamente sin perder control
+de la línea de comandos?
+
+
+~$ xclock -d -update 1
+
+--------------a.------------------------------------
+^Z
+[1]+  Detenido                xclock -d -update 1
+~$ fg %1
+xclock -d -update 1
+
+fg -> lanza el proceso pausado en primer plano (monopolizando el terminal)
+
+--------------b.-------------------------------------
+Z
+[1]+  Detenido                xclock -d -update 1
+~$ bg %1
+[1]+ xclock -d -update 1 &
+
+bg -> lanza el proceso pausado en segundo plano (similar a ejecutarlo con & al final, dejando el terminal libre)
+
+---------------c.-----------------------------------
+~$ xclock -d -update 1 &
+[2] 44359
+[1]   Hecho                   xclock -d -update 1
+
