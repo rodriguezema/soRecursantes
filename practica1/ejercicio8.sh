@@ -9,7 +9,7 @@
 # dispositivos como un mouse.
 
 #!/bin/bash
-
+(
 if  [  -d "./log" ]; then
     rm -rf ./log/*.log
  else
@@ -18,14 +18,17 @@ fi
 
 while true
  do
+ #lista de los puertos USB
   devs=`ls -al /dev/disk/by-path/*usb*part* 2>/dev/null | awk '{print($11)}'`
   sleep 3
   montado=0
   for dev in $devs
+  #bucle sobre los dispositivos usb, si estan conectados se guarda en una variable
+  #sobre cada nombre de dispositivo y se comprueba si esta montado
      do 
          fecha=`date +%Y%m%d%H%M%S`
          log=./log/usb_$fecha.log
-                
+             
              dev=${dev##*\/}
              sleep 1
              echo "Se ha detectado una inserción de un pendrive en el puerto USB $dev" > $log
@@ -39,10 +42,11 @@ while true
                fi
              echo " " >> $log
              cat $log | mail -s "Pendrive detectado" root@localhost
-           
+             #se desatacha el pendrive si esta montado
              udisksctl power-off -b /dev/$dev > /dev/null 2>&1
+             #se envia un mensaje por wall a cada usuario del sistema
              echo -e "\n############\nEl sistema no admite conexion ni montado de unidades de memoria usb.\nCada caso sera reportado al administrador.\n############\n" | wall
               
   done
 done 
-
+) &

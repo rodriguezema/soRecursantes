@@ -1,0 +1,6 @@
+Listado de las cartas corregidas
+./cartas/corregidas/22-05-2022_2356/carta1.docx
+./cartas/corregidas/22-05-2022_2356/carta2.docx
+./cartas/corregidas/22-05-2022_2356/carta3.docx
+./cartas/corregidas/22-05-2022_2356/carta4.docx
+./cartas/corregidas/22-05-2022_2356/carta5.docx

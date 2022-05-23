@@ -1,0 +1,46 @@
+[H[2J[3J[1;31m
+Menu Semáforo en BASH
+[1;32m
+1. Sin Semáforo
+[1;34m
+2. Con Semáforo
+[0m
+3. Salir
+[1;31m
+Elige una opción: 
+[0m
+ 
+[1;32m
+Ejecutando sin semáforo
+ 
+Inicializando contador...
+Contador: 0
+Contador: -10000
+[1;31m
+Menu Semáforo en BASH
+[1;32m
+1. Sin Semáforo
+[1;34m
+2. Con Semáforo
+[0m
+3. Salir
+[1;31m
+Elige una opción: 
+[0m
+ 
+[1;34m
+Ejecutando con semáforo
+ 
+Inicializando contador...
+Contador: 0
+Contador: 0
+[1;31m
+Menu Semáforo en BASH
+[1;32m
+1. Sin Semáforo
+[1;34m
+2. Con Semáforo
+[0m
+3. Salir
+[1;31m
+Elige una opción: 
